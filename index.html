@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GymControl MX: plataforma inteligente para gestión de gimnasios, control de aforo, membresías, mantenimiento predictivo y arquitectura empresarial." />
+  <meta name="author" content="Nelson Eduardo Pérez de los Santos" />
+  <title>GymControl MX | Gimnasio Inteligente</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="site-header" id="inicio">
+    <nav class="navbar">
+      <a class="brand" href="#inicio" aria-label="Inicio GymControl MX">
+        <span class="brand-icon">GX</span>
+        <span>
+          <strong>GymControl</strong>
+          <small>MX</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#innovacion">Innovación</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#zachman">Zachman</a>
+        <a href="#beneficios">Beneficios</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="hero-content">
+        <h1>Convierte un gimnasio tradicional en un <span>gimnasio inteligente</span>.</h1>
+        <p class="hero-text">
+          Plataforma web para controlar aforo, membresías, clientes, promociones,
+          mantenimiento de máquinas y decisiones administrativas en tiempo real.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#dashboard">Ver prototipo</a>
+          <a class="btn btn-secondary" href="#zachman">Ver arquitectura</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel glass-card">
+        <div class="panel-top">
+          <span class="live-dot"></span>
+          <p>Monitoreo activo</p>
+        </div>
+        <div class="hero-metric">
+          <span>Personas dentro</span>
+          <strong id="heroPeople">35</strong>
+          <small>Capacidad actual del gimnasio</small>
+        </div>
+        <div class="capacity-line">
+          <span style="--w: 58%"></span>
+        </div>
+        <div class="mini-grid">
+          <div>
+            <strong>128</strong>
+            <span>Membresías</span>
+          </div>
+          <div>
+            <strong>3</strong>
+            <span>Promos</span>
+          </div>
+          <div>
+            <strong>$12.4k</strong>
+            <span>Ingresos</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section-pad problem-section" id="innovacion">
+      <div class="section-heading">
+        <p class="eyebrow">Idea principal</p>
+        <h2>Innovación propuesta</h2>
+        <p>
+          GymControl MX no solo registra clientes: usa datos para mejorar la experiencia,
+          reducir saturación, retener usuarios y apoyar decisiones del negocio.
+        </p>
+      </div>
+
+      <div class="innovation-grid">
+        <article class="feature-card">
+          <span class="card-icon">📲</span>
+          <h3>Acceso QR/NFC</h3>
+          <p>Entrada y salida del cliente mediante credencial digital para medir aforo real.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-icon">🚦</span>
+          <h3>Semáforo de ocupación</h3>
+          <p>Indica si el gimnasio está bajo, medio o saturado antes de que el cliente asista.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-icon">🧠</span>
+          <h3>Predicción de abandono</h3>
+          <p>Detecta clientes con baja asistencia y sugiere seguimiento o promociones.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-icon">🛠️</span>
+          <h3>Mantenimiento predictivo</h3>
+          <p>Identifica máquinas con alto uso para programar revisión antes de fallas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad dashboard-section" id="dashboard">
+      <div class="section-heading left">
+        <p class="eyebrow">Demo funcional</p>
+        <h2>Panel inteligente del administrador</h2>
+        <p>
+          Este prototipo funciona sin servidor. Los datos se simulan en el navegador para que pueda subirse directamente a GitHub Pages.
+        </p>
+      </div>
+
+      <div class="dashboard-layout">
+        <aside class="sidebar glass-card">
+          <div class="admin-profile">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Administrador</strong>
+              <small>GymControl MX</small>
+            </div>
+          </div>
+          <a class="active" href="#dashboard">📊 Dashboard</a>
+          <a href="#clientesPanel">👥 Clientes</a>
+          <a href="#maquinasPanel">🏋️ Máquinas</a>
+          <a href="#zachman">🏢 Arquitectura</a>
+        </aside>
+
+        <div class="dashboard-content">
+          <div class="stats-grid">
+            <article class="stat-card glass-card">
+              <span>Personas dentro</span>
+              <strong id="peopleCount">35</strong>
+              <small id="occupationLabel">Ocupación media</small>
+            </article>
+            <article class="stat-card glass-card">
+              <span>Membresías activas</span>
+              <strong id="membershipCount">128</strong>
+              <small>+12 este mes</small>
+            </article>
+            <article class="stat-card glass-card">
+              <span>Riesgo de abandono</span>
+              <strong id="riskCount">7</strong>
+              <small>Clientes requieren seguimiento</small>
+            </article>
+            <article class="stat-card glass-card">
+              <span>Ingresos del día</span>
+              <strong id="incomeCount">$12,450</strong>
+              <small>Meta diaria: $15,000</small>
+            </article>
+          </div>
+
+          <div class="control-row glass-card">
+            <div>
+              <h3>Control de aforo</h3>
+              <p>Ajusta el número de personas para ver el semáforo inteligente.</p>
+            </div>
+            <label class="range-control">
+              <span>Aforo actual</span>
+              <input type="range" id="capacityRange" min="0" max="80" value="35" />
+            </label>
+            <div class="traffic-light" id="trafficLight">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="glass-card chart-card">
+              <div class="card-header">
+                <h3>Horarios más concurridos</h3>
+                <span>Hoy</span>
+              </div>
+              <div class="bar-chart" aria-label="Gráfica de horarios">
+                <div style="--h:35%"><span>6am</span></div>
+                <div style="--h:55%"><span>9am</span></div>
+                <div style="--h:45%"><span>12pm</span></div>
+                <div style="--h:75%"><span>6pm</span></div>
+                <div style="--h:90%"><span>8pm</span></div>
+                <div style="--h:50%"><span>10pm</span></div>
+              </div>
+            </article>
+
+            <article class="glass-card recommendation-card">
+              <div class="card-header">
+                <h3>Recomendación inteligente</h3>
+                <span>IA simulada</span>
+              </div>
+              <p id="smartRecommendation">
+                El horario de 8:00 p.m. está cerca de saturación. Se recomienda promover asistencia a las 5:00 p.m. o 9:30 p.m.
+              </p>
+              <button class="btn btn-small" id="generateTip">Generar recomendación</button>
+            </article>
+          </div>
+
+          <div class="two-column">
+            <article class="glass-card" id="clientesPanel">
+              <div class="card-header">
+                <h3>Clientes recientes</h3>
+                <button class="btn btn-small" id="addClientBtn">Agregar demo</button>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Cliente</th>
+                      <th>Membresía</th>
+                      <th>Asistencia</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody id="clientTable"></tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="glass-card" id="maquinasPanel">
+              <div class="card-header">
+                <h3>Mantenimiento predictivo</h3>
+                <span>Alertas</span>
+              </div>
+              <div class="machine-list" id="machineList"></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad zachman-section" id="zachman">
+      <div class="section-heading">
+        <p class="eyebrow">Arquitectura empresarial</p>
+        <h2>Aplicación del marco de Zachman</h2>
+        <p>
+          El proyecto se puede explicar mediante las preguntas base de arquitectura empresarial:
+          qué, cómo, dónde, quién, cuándo y por qué.
+        </p>
+      </div>
+
+      <div class="zachman-grid">
+        <article>
+          <span>¿Qué?</span>
+          <h3>Datos</h3>
+          <p>Clientes, membresías, asistencias, pagos, máquinas, promociones y reportes.</p>
+        </article>
+        <article>
+          <span>¿Cómo?</span>
+          <h3>Procesos</h3>
+          <p>Registro, acceso QR, renovación, control de aforo y seguimiento de clientes.</p>
+        </article>
+        <article>
+          <span>¿Dónde?</span>
+          <h3>Ubicación tecnológica</h3>
+          <p>Sitio web, recepción, dispositivos móviles, base de datos y nube.</p>
+        </article>
+        <article>
+          <span>¿Quién?</span>
+          <h3>Actores</h3>
+          <p>Administrador, recepcionista, entrenador, cliente y dueño del gimnasio.</p>
+        </article>
+        <article>
+          <span>¿Cuándo?</span>
+          <h3>Eventos</h3>
+          <p>Entrada, salida, pago, vencimiento de membresía, horas pico y mantenimiento.</p>
+        </article>
+        <article>
+          <span>¿Por qué?</span>
+          <h3>Objetivo</h3>
+          <p>Mejorar control, experiencia del cliente, retención e ingresos del gimnasio.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad benefits-section" id="beneficios">
+      <div class="glass-card benefit-banner">
+        <div>
+          <p class="eyebrow">Resultado esperado</p>
+          <h2>Un sistema visual y muy útil.</h2>
+          <p>
+            La plataforma demuestra cómo una arquitectura digital puede transformar la operación
+            de un gimnasio usando procesos, datos y tecnología.
+          </p>
+        </div>
+        <button class="btn btn-primary" id="openQrBtn">Mostrar credencial QR</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>GymControl MX · Proyecto </p>
+  </footer>
+
+  <div class="modal" id="qrModal" aria-hidden="true">
+    <div class="modal-card glass-card">
+      <button class="close-modal" id="closeQrBtn" aria-label="Cerrar modal">×</button>
+      <h3>Credencial digital del cliente</h3>
+      <p>Demo visual de acceso QR para registrar entrada y salida.</p>
+      <div class="fake-qr" aria-label="QR de demostración">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <strong>Cliente: Demo Premium</strong>
+      <small>Estado: Membresía activa</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
